@@ -1,4 +1,5 @@
 library(png)
+library(tidyverse)
 
 color.matrix=matrix(
 c(255, 255, 255,
