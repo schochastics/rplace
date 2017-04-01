@@ -19,6 +19,17 @@ ffmpeg -framerate 128 -i board-bitmap.%d.png -c:v libx264 -crf 21 place.mp4
 ```
 change framerate at will
 
+## crop mp4
+if you are only interested in a part of the bitmap, you can crop `place.mp4` as follows
+```shell
+ffmpeg -i in.mp4 -filter:v "crop=out_w:out_h:x:y" out.mp4
+```
+Options:
+* out_w: the width of the output rectangle
+* out_h: the height of the output rectangle
+* x and y: the top left corner of the output rectangle
+
+
 ## color distribution
 
 use `colorDistr.R`
