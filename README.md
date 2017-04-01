@@ -6,7 +6,7 @@ Some code to analyse r/place
 Get the bitmap file every 10 seconds
 
 ```shell
-while test 1 ; do wget https://www.reddit.com/api/place/board-bitmap ; sleep 5 ; done
+while test 1 ; do wget https://www.reddit.com/api/place/board-bitmap ; sleep 10 ; done
 ```
 # convert to png
 
