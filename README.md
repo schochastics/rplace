@@ -18,3 +18,7 @@ Can be done with [this](https://github.com/trosh/rplace/blob/master/rplacelapse.
 ffmpeg -framerate 128 -i board-bitmap.%d.png -c:v libx264 -crf 21 place.mp4
 ```
 change framerate at will
+
+## color distribution
+
+use `colorDistr.R`
