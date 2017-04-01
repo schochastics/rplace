@@ -35,3 +35,4 @@ Options:
 use `colorDistr.R`
 
 ![color distribution](https://github.com/schochastics/rplace/blob/master/colordistribution.png)
+![color_distribution_line](colordistribution_line.png)
