@@ -22,3 +22,5 @@ change framerate at will
 ## color distribution
 
 use `colorDistr.R`
+
+![color distribution](https://github.com/schochastics/rplace/blob/master/colordistr.png)
