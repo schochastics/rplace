@@ -28,10 +28,11 @@ color.flat=rowSums(color.matrix)
 color.matrix=color.matrix[order(rowSums(color.matrix)),]
 
 #time variable: the first 348 entries are 20 sec snapshots. after that every 10
+start=ymd_hms("2017-03-31 20:39:00",tz = "CEST")+seconds(21*(1:348))
+end=ymd_hms("2017-03-31 22:41:00",tz = "CEST")+seconds(11*(1:(n-348)))
+all=c(start-hours(2),end-hours(2)) #using c() somehow adds two hours oO
 time.vec<-
-rep(c(
-  ymd_hms("2017-03-31 22:41:00",tz = "CEST")-seconds(21*(348:1)),
-  ymd_hms("2017-03-31 22:41:00",tz = "CEST")+seconds(11*(1:(n-348)))),16)
+rep(all,16)
 
 df.distr %>% 
   gather(key="variable",value="value",col1:col16) %>% 
