@@ -44,6 +44,7 @@ df.distr %>%
   ggplot(aes(x=time,y=value,group=variable))+geom_area(aes(fill=variable))+
   scale_fill_manual(values=apply(color.matrix,1,function(x) rgb(x[1],x[2],x[3],255,maxColorValue = 255)),name="",
                     labels=apply(color.matrix,1,function(x) paste(x[1],x[2],x[3],sep=",")))+
+  annotate("rect",xmin=min(time.vec),xmax=max(time.vec),ymin=0,ymax=1,fill=NA,col="black")+
   theme_tufte()+
   theme(legend.position="bottom",
         legend.text = element_text(size=6))+
