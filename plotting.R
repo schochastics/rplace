@@ -31,8 +31,7 @@ color.matrix=color.matrix[order(rowSums(color.matrix)),]
 start=ymd_hms("2017-03-31 20:39:00",tz = "CEST")+seconds(21*(1:348))
 end=ymd_hms("2017-03-31 22:41:00",tz = "CEST")+seconds(11*(1:(n-348)))
 all=c(start-hours(2),end-hours(2)) #using c() somehow adds two hours oO
-time.vec<-
-rep(all,16)
+time.vec<-rep(all,16)
 
 df.distr %>% 
   gather(key="variable",value="value",col1:col16) %>% 
