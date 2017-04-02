@@ -64,6 +64,6 @@ df.distr %>%
   theme_tufte()+
   theme(legend.position="bottom")+
   guides(fill = guide_legend(nrow = 2))+
-  labs(x="Time",y="Frequencies",title="Color Distribution of r/place",subtitle="from March 31 10:41pm to April 1 12:36am CEST")
+  labs(x="Time",y="Frequencies",title="Color Distribution of r/place",subtitle="from March 31 10:41pm to April 1 1:32am CEST")
 ggsave("colordistr.png")
 save(list=c("df.distr"),file = "col.distr.RData")
