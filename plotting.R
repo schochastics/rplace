@@ -77,6 +77,6 @@ ggsave("colordistribution_line.png",type = "cairo-png")
 # changes heatmap ----
 data.frame(x=rep(1:1000,1000),y=rep(1:1000,each=1000),z=c(change)) %>% 
   ggplot(aes(y,x))+geom_tile(aes(fill=log(z+1)))+scale_y_reverse()+
-  scale_fill_gradient(low="white",high="#CD2626",name="log number \nof changes")+
+  scale_fill_gradient(low="black",high="#FFD700",name="log number \nof changes")+
   theme_tufte()
 ggsave("heatmap.png",type = "cairo-png")
