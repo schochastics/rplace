@@ -31,17 +31,17 @@ Options:
 * x and y: the top left corner of the output rectangle
 
 
-## plot color distributions
+# plot color distributions
 
 use `plotting.R`
  
-###area plot
+## area plot
 ![color distribution](https://github.com/schochastics/rplace/blob/master/colordistribution.png)
 
-### line chart
+## line chart
 ![color_distribution_line](colordistribution_line.png)
 
-### heatmap
+## heatmap
 how often did a pixel change its color? (logarithmic scale)
 ![heatmap](heatmap.png)
 
