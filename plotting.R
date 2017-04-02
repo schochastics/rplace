@@ -1,3 +1,4 @@
+load("col.change.RData")
 load("col.distr.RData")
 library(tidyverse)
 library(ggthemes)
@@ -33,6 +34,7 @@ end=ymd_hms("2017-03-31 22:41:00",tz = "CEST")+seconds(11*(1:(n-348)))
 all=c(start-hours(2),end-hours(2)) #using c() somehow adds two hours oO
 time.vec<-rep(all,16)
 
+#area chart -----
 df.distr %>% 
   gather(key="variable",value="value",col1:col16) %>% 
   mutate(variable=factor(variable,levels=paste0("col",1:16))) %>% 
@@ -52,7 +54,7 @@ df.distr %>%
        subtitle=paste0("from ",min(time.vec)," to ",max(time.vec), " CEST"))
 ggsave("colordistribution.png",type = "cairo-png")
 
-
+#line chart ----
 df.distr %>% 
   gather(key="variable",value="value",col1:col16) %>% 
   mutate(variable=factor(variable,levels=paste0("col",1:16))) %>% 
@@ -71,3 +73,10 @@ df.distr %>%
   labs(x="Time",y="Fraction of total",title="Color Distribution of r/place",
        subtitle=paste0("from ",min(time.vec)," to ",max(time.vec), " CEST"))
 ggsave("colordistribution_line.png",type = "cairo-png")
+
+# changes heatmap ----
+data.frame(x=rep(1:1000,1000),y=rep(1:1000,each=1000),z=c(change)) %>% 
+  ggplot(aes(y,x))+geom_tile(aes(fill=log(z+1)))+scale_y_reverse()+
+  scale_fill_gradient(low="white",high="#CD2626",name="log number \nof changes")+
+  theme_tufte()
+ggsave("heatmap.png",type = "cairo-png")
