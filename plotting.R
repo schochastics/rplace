@@ -2,7 +2,7 @@ load("col.distr.RData")
 library(tidyverse)
 library(ggthemes)
 library(lubridate)
-
+library(Cairo)
 
 n=nrow(df.distr)
 
