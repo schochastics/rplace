@@ -4,6 +4,7 @@ library(tidyverse)
 library(ggthemes)
 library(lubridate)
 library(Cairo)
+library(scales)
 
 n=nrow(df.distr)
 
