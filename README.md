@@ -38,3 +38,7 @@ use `colorDistr.R`
 ![color distribution](https://github.com/schochastics/rplace/blob/master/colordistribution.png)
 without white and line plot
 ![color_distribution_line](colordistribution_line.png)
+
+heatmap for how often a pixel changed color
+![heatmap](heatmap.png)
+
