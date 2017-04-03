@@ -87,6 +87,6 @@ data.frame(x=rep(1:1000,1000),y=rep(1:1000,each=1000),z=c(survive)) %>%
   # geom_tile(aes(fill=log(z+1)))+
   geom_tile(aes(fill=z))+
   scale_y_reverse()+
-  scale_fill_gradient(low="black",high="#FFD700",name="time since \nlast change")+
+  scale_fill_gradient(low="black",high="#FFD700",name="frames since \nlast change")+
   theme_tufte()
 ggsave("heatmap_survive.png",type = "cairo-png")
