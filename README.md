@@ -45,6 +45,6 @@ use `plotting.R`
 how often did a pixel change its color? (logarithmic scale)
 ![heatmap](heatmap.png)
 
-##heatmap of survivability
+## heatmap of survivability
 how long since the last edit of a pixel?
 ![heatmap_survive](heatmap_survive.png)
