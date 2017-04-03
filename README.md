@@ -41,7 +41,10 @@ use `plotting.R`
 ## line chart
 ![color_distribution_line](colordistribution_line.png)
 
-## heatmap
+## heatmap of activity
 how often did a pixel change its color? (logarithmic scale)
 ![heatmap](heatmap.png)
 
+##heatmap of survivability
+how long since the last edit of a pixel?
+![heatmap_survive](heatmap_survive.png)

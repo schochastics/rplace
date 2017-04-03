@@ -81,3 +81,12 @@ data.frame(x=rep(1:1000,1000),y=rep(1:1000,each=1000),z=c(change)) %>%
   scale_fill_gradient(low="black",high="#FFD700",name="log number \nof changes")+
   theme_tufte()
 ggsave("heatmap.png",type = "cairo-png")
+
+data.frame(x=rep(1:1000,1000),y=rep(1:1000,each=1000),z=c(survive)) %>% 
+  ggplot(aes(y,x))+
+  # geom_tile(aes(fill=log(z+1)))+
+  geom_tile(aes(fill=z))+
+  scale_y_reverse()+
+  scale_fill_gradient(low="black",high="#FFD700",name="time since \nlast change")+
+  theme_tufte()
+ggsave("heatmap_survive.png",type = "cairo-png")
