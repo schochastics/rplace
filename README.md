@@ -1,6 +1,8 @@
 # Analyse r/place
-Some code to analyse r/place
-![color distribution](https://github.com/schochastics/rplace/blob/master/colordistribution.png)
+Some code to analyse r/place  
+
+Final color distribution
+![color distribution](colordistribution_end.png)
 
 ## bitmap file
 
